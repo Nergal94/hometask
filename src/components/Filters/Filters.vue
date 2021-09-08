@@ -3,6 +3,7 @@
     <div class="filter mr-8">
       <label class="mr-8">Find for title</label>
       <select v-model="title" @change="setTitleFilter">
+        <option value="">Reset</option>
         <option
           v-for="book in books"
           :key="book.id"
@@ -12,6 +13,7 @@
     <div class="filter">
       <label class="mr-8">Find for date</label>
       <select v-model="publishDate" @change="setDateFilter">
+        <option value="">Reset</option>
         <option
           v-for="book in books"
           :key="book.id"

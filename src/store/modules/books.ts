@@ -21,6 +21,18 @@ export default {
     [BooksMutations.ADD_FILTER](state: any, filter: IFilter) {
 
       const filterExistIndex = state.filters.findIndex((f: IFilter) => f.type === filter.type);
+
+      if (!filter.value && filterExistIndex > -1) {
+        state.filters.splice(filterExistIndex, 1);
+        return;
+      }
+
+      console.log(filter)
+
+      if (!filter.value && filterExistIndex === -1) {
+        return;
+      }
+
       if (filterExistIndex > -1 ) {
         state.filters[filterExistIndex].value = filter.value;
         return;
