@@ -1,0 +1,21 @@
+@import "../../style/common";
+
+.filters {
+  @extend .d-flex;
+  @extend .align-items-center;
+  @extend .justify-content-end;
+
+  margin-bottom: 25px;
+}
+
+
+.filter {
+  @extend .d-flex;
+  @extend .align-items-center;
+
+  select {
+    padding: 6px 12px;
+    border: 1px solid rgba(0, 0, 0, 0.4);
+    min-height: 34px;
+  }
+}

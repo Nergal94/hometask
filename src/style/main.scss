@@ -1,0 +1,20 @@
+@import "common";
+
+html, body {
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+
+#app {
+  @extend .d-flex;
+  @extend .justify-content-center;
+  background: #eee;
+  min-height: 100%;
+  padding: 100px 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  text-align: center;
+}
